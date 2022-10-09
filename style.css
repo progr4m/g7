@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Give Away', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-title{
+    color: black;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero{
+    background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(https://i.pinimg.com/564x/ed/86/00/ed86001f259f724077d692a891541eec.jpg?fbclid=IwAR38EQWAh89O-ObBOpXGriE5dpDD45jYe3_cOlzNdmcH0FgFTtoDeJneQ8s);
+    background-size: cover;
+    position: relative;
+    background-position: top center;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 42px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 1.5s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.3s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid green;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: 0.3 ease;
+    transition-property: background-color, color;
+
+}
+#hero .cta:hover{
+    background-color: green;
+    color: #fff;
+}
+/* End Hero Section*/
+
+/* Info Section */
+#info .info{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#info .info-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#info .info-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(https://media.istockphoto.com/photos/forest-wooden-table-background-summer-sunny-meadow-with-green-grass-picture-id1353553203?b=1&k=20&m=1353553203&s=170667a&w=0&h=QTyTGI9tWQluIlkmwW0s7Q4z7R_IT8egpzzHjW3cSas=);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#info .info-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+#info .info-bottom .icon{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+#info .info-item h2{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#info .info-item p{
+    font-size: 18px;
+    color: white;
+    line-height: 30.4px;
+}
+/* End Info Section */
+
+/* Extra Info Section */
+#extra .extra{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#extra .extra-info-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#extra .extra-info-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg?auto=webp);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#extra .extra-info-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+#extra .extra-info-bottom .icon{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+#extra .extra-info-item h2{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#extra .extra-info-item p{
+    font-size: 18px;
+    color: white;
+    line-height: 30.4px;
+}
+
+/* End Extra Info Section */
+
+/* Video Section */
+
+/* Footer */
+footer{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ;
+    padding: 25px 0;
+    text-align: center;
+}
+footer h1 span{
+    color: rgb(71, 10, 10);
+}
+/* End Footer */
+
+/* Keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color:#fff
+    }
+}
+/* End Keyframes */
+
+/* Media Query */
+@media only screen and (min-width:786px){
+ .cta{
+    font-size: 2.5rem;
+    padding: 20px 60px;
+ }   
+ h1.section-title{
+    font-size: 6rem;
+ }
+}
+    
+/* End Media Query */
